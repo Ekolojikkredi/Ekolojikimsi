@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e6ffe6;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  height: 600px;
+  background-color: #d4ffd4;
+  border: 2px solid #b7d4b7;
+}
+
+.left-panel {
+  flex: 1;
+  padding: 20px;
+  background-color: #ccffcc;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.right-panel {
+  flex: 1;
+  background-color: #ccffe5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background-color: #008000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
+
+.circle span {
+  display: block;
+}
+
+h1 {
+  font-size: 24px;
+  color: #006600;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #004d00;
+  text-align: center;
+}
+
+.menu {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+  color: #004d00;
+}
+
+.menu li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #b3ffb3;
+  border: 1px solid #8fcc8f;
+  border-radius: 5px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #004d00;
+  display: block;
+  text-align: center;
+}
+
+.right-panel button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #008000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 80%;
+}
+
+.right-panel button:hover {
+  background-color: #005700;
+}
+
+.section {
+  display: none;
+  padding: 20px;
+}
+
+.section h2 {
+  margin-top: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label,
+form input,
+form select,
+form button {
+  margin-bottom: 10px;
+}
+
+form input,
+form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px;
+  background-color: #008000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #005700;
+}
