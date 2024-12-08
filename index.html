@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekolojik Kredi</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <div class="logo">
+        <div class="circle">
+          <span>Ekolojik Kredi</span>
+        </div>
+        <h1>Ekolojik Kredi</h1>
+      </div>
+      <p class="description">TORBALI ANADOLU LİSESİ EKOLOJİK KREDİ TÜBİTAK PROJESİ ÖRNEK SİTESİ</p>
+      <ul class="menu">
+        <li><a href="#ekolojik-kredi-nedir" onclick="showSection('ekolojik-kredi-nedir')">Ekolojik Kredi Nedir?</a></li>
+        <li><a href="#geri-donusum" onclick="showSection('geri-donusum')">Geri Dönüşüm Nedir?</a></li>
+        <li><a href="#hazirlayanlar" onclick="showSection('hazirlayanlar')">Hazırlayanlar</a></li>
+        <li><a href="#daha-fazla-bilgi" onclick="showSection('daha-fazla-bilgi')">Ekolojik Kredi hakkında daha fazla bilgi için tıklayınız.</a></li>
+        <li><a href="#bize-ulasin" onclick="showSection('bize-ulasin')">Bize Ulaşın</a></li>
+        <li><a href="#toplam-atik" onclick="showSection('toplam-atik')">Toplam Atık Sayacı</a></li>
+      </ul>
+    </div>
+    <div class="right-panel">
+      <button onclick="showSection('kayit')">Kayıt Ol</button>
+      <button onclick="showSection('veri-goruntuleme')">Veri Görme</button>
+      <button onclick="showSection('veri-girisi')">Veri Girişi</button>
+    </div>
+  </div>
+
+  <div id="ekolojik-kredi-nedir" class="section">
+    <h2>Ekolojik Kredi Nedir?</h2>
+    <p>Ekolojik Kredi Projesi, çevre bilincini artırmak ve okullarda geri dönüşüm kültürünü geliştirmek amacıyla oluşturulmuştur. Öğrenciler, atıkları türlerine göre ayrıştırarak puan toplar ve ödüller kazanır. Proje, Türkiye'nin sıfır atık hedeflerine ve doğal kaynakların korunmasına katkı sağlamayı amaçlar.</p>
+  </div>
+
+  <div id="geri-donusum" class="section">
+    <h2>Geri Dönüşüm Nedir?</h2>
+    <p>Geri dönüşüm, atık materyallerin toplanarak yeniden işlenmesi ve yeni ürünler oluşturulması sürecidir. Bu süreç, doğal kaynakların korunmasını sağlar, enerji tasarrufu yapar ve çevre kirliliğini azaltır. Geri dönüşüm, aynı zamanda ekonomi için de faydalıdır çünkü yeni hammadde ihtiyacını azaltır ve atık yönetim maliyetlerini düşürür. Geri dönüşümün önemi günümüzde daha da artmıştır, çünkü dünya kaynakları hızla tükenmekte ve çevre kirliliği ciddi boyutlara ulaşmaktadır. Bu nedenle, geri dönüşüm alışkanlığı kazanmak ve bunu yaygınlaştırmak her bireyin sorumluluğudur.</p>
+  </div>
+
+  <div id="hazirlayanlar" class="section">
+    <h2>Hazırlayanlar</h2>
+    <p>Danışman: Osman Onuk</p>
+    <p>Öğrenciler: Muhammedcan Arslanparçası, Yağız Efe Yılmaz, Bilal Yiğit Tezcan</p>
+  </div>
+
+  <div id="daha-fazla-bilgi" class="section">
+    <h2>Ekolojik Kredi hakkında daha fazla bilgi için tıklayınız.</h2>
+    <p>Daha fazla bilgi için <a href="https://sifiratik.gov.tr/">Sıfır Atık</a> sitesini ziyaret edebilirsiniz.</p>
+  </div>
+
+  <div id="bize-ulasin" class="section">
+    <h2>Bize Ulaşın</h2>
+    <p>E-posta: ekolojikkreditubitak@gmail.com</p>
+    <p>Adres: Torbalı Anadolu Lisesi</p>
+  </div>
+
+  <div id="toplam-atik" class="section">
+    <h2>Toplam Atık Sayacı</h2>
+    <p>Toplam atık kilogramı: <span id="toplam-atik-kilogrami">0</span> kg</p>
+  </div>
+
+  <div id="kayit" class="section">
+    <h2>Kayıt Ol</h2>
+    <form id="kayitForm">
+      <label for="kayit-tipi">Kayıt Tipi:</label>
+      <select id="kayit-tipi" name="kayit-tipi" required>
+        <option value="ogrenci">Öğrenci Kayıt</option>
+        <option value="okul">Okul Kayıt</option>
+      </select>
+      <div id="ogrenci-kayit" style="display:none;">
+        <label for="isim">İsim:</label>
+        <input type="text" id="isim" name="isim" required><br>
+        <label for="soyisim">Soyisim:</label>
+        <input type="text" id="soyisim" name="soyisim" required><br>
+        <label for="il">İl:</label>
+        <input type="text" id="il" name="il" required><br>
+        <label for="ilce">İlçe:</label>
+        <input type="text" id="ilce" name="ilce" required><br>
+        <label for="okul">Okul:</label>
+        <input type="text" id="okul" name="okul" required><br>
+        <label for="okul_numarasi">Okul Numarası:</label>
+        <input type="text" id="okul_numarasi" name="okul_numarasi" required><br>
+        <label for="email">E-posta:</label>
+        <input type="email" id="email" name="email" required><br>
+        <button type="submit">Kayıt Ol</button>
+      </div>
+      <div id="okul-kayit" style="display:none;">
+        <label for="okul">Okul:</label>
+        <input type="text" id="okul" name="okul" required><br>
+        <label for="il">İl:</label>
+        <input type="text" id="il" name="il" required><br>
+        <label for="ilce">İlçe:</label>
+        <input type="text" id="ilce" name="ilce" required><br>
+        <label for="okul_sifre">Şifre:</label>
+        <input type="password" id="okul_sifre" name="okul_sifre" required><br>
+        <button type="submit">Kayıt Ol</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="veri-girisi" class="section">
+    <h2>Veri Girişi</h2>
+    <form id="veriGirisiForm">
+      <label for="okulIsmi">Okul İsmi:</label>
+      <input type="text" id="okulIsmi" name="okulIsmi" required><br>
+      <label for="okulSifresi">Okul Şifresi:</label>
+      <input type="password" id="okulSifresi" name="okulSifresi" required><br>
+      <label for="ogrenci_id">Öğrenci ID:</label>
+      <input type="number" id="ogrenci_id" name="ogrenci_id" required><br>
+      <label for="atik_turu">Atık Türü:</label>
+      <select id="atik_turu" name="atik_turu" required>
+        <option value="kağıt">Kağıt</option>
+        <option value="plastik">Plastik</option>
+        <option value="cam">Cam</option>
+        <option value="metal">Metal</option>
+        <option value="elektronik">Elektronik</option>
+        <option value="yağ">Yağ</option>
+        <option value="tekstil">Tekstil</option>
+      </select><br>
+      <label for="miktar">Miktar (kg):</label>
+      <input type="number" id="miktar" name="miktar" step="0.01" required><br>
+      <label for="dogru_ayristirma">Doğru Ayrıştırma:</label>
+      <select id="dogru_ayristirma" name="dogru_ayristirma" required>
+        <option value="1">Evet</option>
+        <option value="0">Hayır</option>
+      </select><br>
+      <label for="teslim_alan">Teslim Alan:</label>
+      <input type="text" id="teslim_alan" name="teslim_alan" required><br>
+      <button type="submit">Veri Girişi</button>
+    </form>
+  </div>
+
+  <div id="veri-goruntuleme" class="section">
+    <h2>Veri Görme</h2>
+    <form id="veriGoruntulemeForm">
+      <label for="email">E-posta:</label>
+      <input type="email" id="email" name="email" required><br>
+      <label for="sifre">Şifre:</label>
+      <input type="password" id="sifre" name="sifre" required><br>
+      <button type="submit">Verileri Gör</button>
+    </form>
+    <div id="veriGoruntulemeContent"></div>
+  </div>
+
+  <div id="onay-mesaji" class="section" style="display:none;">
+    <h2>İşlem Başarılı</h2>
+    <p>İşleminiz başarıyla tamamlandı!</p>
+    <button onclick="showSection('')">Tamam</button>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(sectionId).style.display = 'block';
+    }
+
+    document.getElementById('kayit-tipi').addEventListener('change', function() {
+      document.getElementById('ogrenci-kayit').style.display = this.value === 'ogrenci' ? 'block' : 'none';
+      document.getElementById('okul-kayit').style.display = this.value === 'okul' ? 'block' : 'none';
+    });
+
+    document.getElementById('kayitForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      let kayitTipi = document.getElementById('kayit-tipi').value;
+      
+      if (kayitTipi === 'ogrenci') {
+        let ogrenciler = JSON.parse(localStorage.getItem('ogrenciler')) || [];
+        let yeniOgrenci = {
+          isim: document.getElementById('isim').value,
+          soyisim: document.getElementById('soyisim').value,
+          il: document.getElementById('il').value,
+          ilce: document.getElementById('ilce').value,
+          okul: document.getElementById('okul').value,
+          okul_numarasi: document.getElementById('okul_numarasi').value,
+          email: document.getElementById('email').value,
+          puan: 0
+        };
+        ogrenciler.push(yeniOgrenci);
+        localStorage.setItem('ogrenciler', JSON.stringify(ogrenciler));
+        alert('Öğrenci kaydı başarıyla tamamlandı!');
+      } else if (kayitTipi === 'okul') {
+        let okullar = JSON.parse(localStorage.getItem('okullar')) || [];
+        let yeniOkul = {
+          okul: document.getElementById('okul').value,
+          il: document.getElementById('il').value,
+          ilce: document.getElementById('ilce').value,
+          sifre: document.getElementById('okul_sifre').value
+        };
+        okullar.push(yeniOkul);
+        localStorage.setItem('okullar', JSON.stringify(okullar));
+        alert('Okul kaydı başarıyla tamamlandı!');
+      }
+
+      showSection('onay-mesaji'); // Onay mesajı göster
+    });
+
+    document.getElementById('veriGirisiForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      let atiklar = JSON.parse(localStorage.getItem('atiklar')) || [];
+      let yeniAtik = {
+        ogrenci_id: document.getElementById('ogrenci_id').value,
+        atik_turu: document.getElementById('atik_turu').value,
+        miktar: document.getElementById('miktar').value,
+        dogru_ayristirma: document.getElementById('dogru_ayristirma').value,
+        teslim_alan: document.getElementById('teslim_alan').value
+      };
+      atiklar.push(yeniAtik);
+      localStorage.setItem('atiklar', JSON.stringify(atiklar));
+      alert('Veri başarıyla girildi!');
+      let toplamAtikKilogrami = atiklar.reduce((total, atik) => total + parseFloat(atik.miktar), 0);
+      document.getElementById('toplam-atik-kilogrami').textContent = toplamAtikKilogrami;
+      showSection('onay-mesaji'); // Onay mesajı göster
+    });
+
+    document.getElementById('veriGoruntulemeForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      let email = document.getElementById('email').value;
+      let sifre = document.getElementById('sifre').value;
+      let ogrenciler = JSON.parse(localStorage.getItem('ogrenciler')) || [];
+      let atiklar = JSON.parse(localStorage.getItem('atiklar')) || [];
+      
+      let ogrenci = ogrenciler.find(o => o.email === email);
+      if (ogrenci) {
+        let veriGormeHtml = `<h3>${ogrenci.isim} ${ogrenci.soyisim}</h3>`;
+        veriGormeHtml += `<p>Email: ${ogrenci.email}</p>`;
+        veriGormeHtml += `<p>İl: ${ogrenci.il}</p>`;
+        veriGormeHtml += `<p>İlçe: ${ogrenci.ilce}</p>`;
+        veriGormeHtml += `<p>Okul: ${ogrenci.okul}</p>`;
+        veriGormeHtml += `<p>Okul Numarası: ${ogrenci.okul_numarasi}</p>`;
+        veriGormeHtml += `<p>Puan: ${ogrenci.puan}</p>`;
+        
+        veriGormeHtml += '<h3>Atıklar:</h3><ul>';
+        atiklar.forEach((atik) => {
+          if (atik.ogrenci_id == ogrenci.okul_numarasi) {
+            veriGormeHtml += `<li>Atık Türü: ${atik.atik_turu}, Miktar: ${atik.miktar} kg, Doğru Ayrıştırma: ${atik.dogru_ayristirma ? 'Evet' : 'Hayır'}, Teslim Alan: ${atik.teslim_alan}</li>`;
+          }
+        });
+        veriGormeHtml += '</ul>';
+        
+        document.getElementById('veriGoruntulemeContent').innerHTML = veriGormeHtml;
+        showSection('veri-goruntuleme');
+      } else {
+        alert('Bu email ile kayıtlı bir öğrenci bulunamadı.');
+      }
+    });
+  </script>
+</body>
+</html>
